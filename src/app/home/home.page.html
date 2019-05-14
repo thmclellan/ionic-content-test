@@ -8,10 +8,16 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    Try this in Safari (not native) in landscape mode on iPhone XR with no other tabs, and window.innerHeight will be 414px. If there is more than one tab open, window.innerHeight will be 327px, but ion-content will still be sized for 414px, and ion-footer will not show.  The hidden footer issue also happens if the user starts with multiple tabs open. 
+    
+    <p text-center>
+      <ion-button (click)="startModal()">Open Modal</ion-button> 
+    </p>
   </div>
 </ion-content>
-<ion-footer class="my-footer">
-  Hello Footer
+<ion-footer>
+  <div class="test-footer">
+      Hello Footer
+  </div> 
+
 </ion-footer>
